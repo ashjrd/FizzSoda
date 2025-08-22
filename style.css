@@ -559,97 +559,60 @@ header {
     font-size: 0.85rem;
     opacity: 0.8;
 }
-/* Mobile Responsive Styles */
-@media (max-width: 768px) {
-    /* Header */
-    header {
+@media (max-width: 852px) {
+    #menu-icon {
+        display: block; /* make the hamburger icon visible */
+    }
+    .navbar {
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        background: var(--bg-color);
         flex-direction: column;
-        align-items: flex-start;
-        padding: 15px;
+        gap: 0;
+        padding: 1rem 0;
     }
-
-    header .navbar {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    /* Home Section */
-    .home {
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .home h1 {
-        font-size: 1.8rem;
-    }
-
-    .home p {
-        font-size: 1rem;
-    }
-
-    .home-btn {
-        font-size: 0.95rem;
-        padding: 10px 18px;
-    }
-
-    /* Products Grid */
-    .products-container {
-        grid-template-columns: 1fr; /* single column on mobile */
-        gap: 15px;
-    }
-
-    .box {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    /* Customers Section */
-    .customers-container {
-        grid-template-columns: 1fr; /* stack reviews */
-    }
-
-    .customer-box {
-        padding: 15px;
-    }
-
-    /* Footer */
-    .footer-container {
-        grid-template-columns: 1fr; /* stack in one column */
-        text-align: center;
-    }
-
-    .footer-column {
-        margin-bottom: 20px;
-    }
-
-    .footer-links {
-        justify-content: center;
+    .navbar.active {
+        top: 100%; /* dropdown below header */
     }
 }
 
-@media (max-width: 480px) {
-    /* Smaller Phones */
-    .home h1 {
-        font-size: 1.5rem;
+/* Fix header padding on small screens */
+@media (max-width: 768px) {
+    header {
+        padding: 12px 20px;
     }
-
-    .home p {
-        font-size: 0.9rem;
+    .home-text {
+        padding: 100px 20px 50px; /* reduce top padding */
     }
+}
 
-    .products h2, 
-    .customers h2, 
-    .about h2 {
-        font-size: 1.4rem;
+/* Scale home images properly */
+@media (max-width: 768px) {
+    .container img {
+        position: static; /* remove absolute positioning */
+        width: 80%;
+        height: auto;
+        margin: 20px auto;
+        display: block;
     }
+}
 
-    .box h2 {
-        font-size: 1rem;
+/* Stack about section content vertically */
+@media (max-width: 712px) {
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
+    .about img {
+        order: 0; /* image above text */
+    }
+}
 
-    .login-box {
-        width: 90%;
-        padding: 20px;
+/* Make products grid more flexible */
+@media (max-width: 500px) {
+    .product-container {
+        grid-template-columns: 1fr; /* single column */
     }
 }
