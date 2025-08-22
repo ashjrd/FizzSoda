@@ -569,9 +569,6 @@ header {
         padding: 1rem 0;
         transition: 0.3s ease;
     }
-    .navbar.active {
-        top: 100%; /* dropdown below header */
-    }
 }
 
 @media (max-width: 768px) {
@@ -605,5 +602,6 @@ header {
         grid-template-columns: 1fr;
     }
 }
+
 
 
