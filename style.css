@@ -93,7 +93,7 @@ header {
 }
 .navbar a:hover, .home-active{
     background: var(--green-color);
-    border-radius: 5rem;
+    border-radius: 2rem;
     color: var(--bg-color);
     transition: background 0.5s;
 }
@@ -610,3 +610,4 @@ header {
         grid-template-columns: 1fr;
     }
 }
+
