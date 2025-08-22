@@ -559,147 +559,97 @@ header {
     font-size: 0.85rem;
     opacity: 0.8;
 }
-/*Making Responsinve */
-@media (max-width:1080px) {
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* Header */
     header {
-        padding: 18px 60px;
-    }
-    .home-text {
-        padding: 0 100px;
-    }
-    .container img{
-        right: 100px;
-    }
-}
-@media (max-width:991px) {
-    header {
-        padding: 18px 4%;
-    }
-    section {
-        pad: 50px 4%;
-    }
-    .home-text h1 {
-        font-size: 2rem;
-    }
-    .home-text {
-        padding: 0 5%;
-    }
-    .swiper-button-next,
-    .swiper-button-prev {
-        margin: 0;
-    }
-}
-@media (max-width:852px) {
-    header {
-        padding: 12px 4%;
-    }
-    #menu-icom {
-        display: initial;
-    }
-    .navbar {
-        position: absolute;
-        top: -570px;
-        left: 0;
-        right: 0;
-        display: flex;
         flex-direction: column;
-        background: var(--bg-color);
-        box-shadow: 4px 4px 0 4px rgb(14 55 54 / 15%);
-        transition: 0.2s all linear;
-        text-align: left;
-    }
-    .navbar a {
-        padding: 1rem;
-        margin: 1rem;
-        display: block;
-    }
-    .navbar a:hover,.navbar .home-active {
-        border-radius: 0.5rem;
-        color: var(--bg-color);
-    }
-    .navbar.active {
-        top: 100%;
-    }
-    .home-text h1 {
-        font-size: 1.7rem;
-    }
-    .container img {
-        width: 390px;
-    }
-    .btn {
-        padding: 0.6rem 1.2rem;
-    }
-    .product-container {
-        grid-template-columns: repeat(auto-fit, minmax(244px, auto));
-    }
-}
-@media (max-width:712px) {
-    .container img {
-        right: 20px;
-    }
-    .heading h1 {
-        font-size: 1.2rem;
-    }
-    .about {
-        grid-template-columns: repeat(auto-fit, minmax(20rem, auto))
-    }
-    .about img {
-        order: 2;
-    }
-    .about-text {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .btn {
-        max-width: 164px;
-    }
-    .customer h2 {
-        font-size: 1.2rem;
-    }
-}
-@media (max-width:642px) {
-    .container img {
-        right: 0%;
-        width: 370px;
-    }
-}
-@media (max-width:546px) {
-    .container img {
-        right: 0%;
-        width: 370px;
-        height: 820px;
-        object-fit: contain;
-    }
-}
-@media (max-width:370px) {
-    .logo {
-        font-size: 1rem;
-    }
-    .profile img {
-        width: 30px;
-        height: 30px;
-    }
-    .profile span {
-        font-size: 10px;
+        align-items: flex-start;
+        padding: 15px;
     }
 
-    .home-text {
-        padding-bottom: 17rem;
-    }
-    .home-text span {
-        font-size: 0.8rem;
-    }
-    .home-texth1 {
-        font-size: 1.4rem;
-    }
-    .heading {
+    header .navbar {
         flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    /* Home Section */
+    .home {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .home h1 {
+        font-size: 1.8rem;
+    }
+
+    .home p {
+        font-size: 1rem;
+    }
+
+    .home-btn {
+        font-size: 0.95rem;
+        padding: 10px 18px;
+    }
+
+    /* Products Grid */
+    .products-container {
+        grid-template-columns: 1fr; /* single column on mobile */
+        gap: 15px;
+    }
+
+    .box {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Customers Section */
+    .customers-container {
+        grid-template-columns: 1fr; /* stack reviews */
+    }
+
+    .customer-box {
+        padding: 15px;
+    }
+
+    /* Footer */
+    .footer-container {
+        grid-template-columns: 1fr; /* stack in one column */
         text-align: center;
     }
-    .heading .btn {
-        margin-top: 1rem;
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller Phones */
+    .home h1 {
+        font-size: 1.5rem;
+    }
+
+    .home p {
+        font-size: 0.9rem;
+    }
+
+    .products h2, 
+    .customers h2, 
+    .about h2 {
+        font-size: 1.4rem;
+    }
+
+    .box h2 {
+        font-size: 1rem;
+    }
+
+    .login-box {
+        width: 90%;
+        padding: 20px;
     }
 }
