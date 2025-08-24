@@ -548,12 +548,13 @@ header {
     color: #ffb6b3;
 }
 .footer-info .i map-link {
-  color: white;          /* makes the text white */
-  text-decoration: underline; /* optional, shows it’s clickable */
+  color: var(--bg-color);
+    font-size: 1.6rem;
+    transition: 0.3s;
 }
 
 .map-link:hover {
-  color: #ccc; /* slightly gray on hover for clarity */
+  color: #ffb6b3;
 }
 .footer-copy {
     text-align: center;
@@ -609,6 +610,7 @@ header {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
