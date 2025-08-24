@@ -547,7 +547,7 @@ header {
     margin-right: 6px;
     color: #ffb6b3;
 }
-map-link {
+.footer-info .i map-link {
   color: white;          /* makes the text white */
   text-decoration: underline; /* optional, shows it’s clickable */
 }
@@ -609,6 +609,7 @@ map-link {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
