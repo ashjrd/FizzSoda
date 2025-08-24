@@ -547,15 +547,6 @@ header {
     margin-right: 6px;
     color: #ffb6b3;
 }
-.footer-info .i p {
-  color: var(--bg-color);
-    font-size: 1.6rem;
-    transition: 0.3s;
-}
-
-.p:hover {
-  color: #ffb6b3;
-}
 .footer-copy {
     text-align: center;
     margin-top: 20px;
@@ -610,6 +601,7 @@ header {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
