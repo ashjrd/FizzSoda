@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let count = 0;
   let totalPrice = 0;
+  let orderQueue = 0; // NEW: queue counter
 
   // Add to cart
   addButtons.forEach(button => {
@@ -80,11 +81,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Order Now -> show modal
+  // ✅ Order Now -> show modal with queue number
   orderBtn.addEventListener("click", () => {
     if (cartItems.children.length === 0) {
       alert("Your cart is empty!");
     } else {
+      // Increase queue number
+      orderQueue++;
+
       // Summary
       orderSummary.innerHTML = "";
       [...cartItems.children].forEach(item => {
@@ -93,8 +97,10 @@ document.addEventListener("DOMContentLoaded", () => {
         orderSummary.appendChild(li);
       });
 
-      orderTotal.textContent = `Total: ₱${totalPrice.toFixed(2)}`;
+      // Show queue number + total
+      orderTotal.textContent = `Total: ₱${totalPrice.toFixed(2)} | You are number ${orderQueue} in line`;
 
+      // Show modal
       modal.classList.add("show");
 
       // Reset cart
