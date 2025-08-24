@@ -547,7 +547,14 @@ header {
     margin-right: 6px;
     color: #ffb6b3;
 }
+map-link {
+  color: white;          /* makes the text white */
+  text-decoration: underline; /* optional, shows it’s clickable */
+}
 
+.map-link:hover {
+  color: #ccc; /* slightly gray on hover for clarity */
+}
 .footer-copy {
     text-align: center;
     margin-top: 20px;
@@ -602,6 +609,7 @@ header {
         grid-template-columns: 1fr;
     }
 }
+
 
 
 
